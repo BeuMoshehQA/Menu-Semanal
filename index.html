@@ -3,29 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menú Semana 2 — Beu</title>
+<title>Menú Semana 3 — Beu</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'DM Sans', sans-serif; background: #0f0f0f; color: #e8e8e0; padding: 20px; min-height: 100vh; }
-  h1 { font-size: 20px; font-weight: 600; color: #e8e8e0; margin-bottom: 2px; }
+  body { font-family: 'DM Sans', sans-serif; background: #0f0f0f; color: #e8e8e0; padding: 20px; }
+  h1 { font-size: 20px; font-weight: 600; margin-bottom: 2px; }
   .subtitle { font-size: 12px; color: #666; margin-bottom: 20px; font-family: 'DM Mono', monospace; }
   .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
   .tab { padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 500; cursor: pointer; border: 1px solid #2a2a2a; background: #1a1a1a; color: #888; transition: all .15s; font-family: 'DM Mono', monospace; }
   .tab.active { background: #e8e8e0; color: #0f0f0f; border-color: #e8e8e0; }
-  .tab.special { border-color: #ff6b6b44; color: #ff6b6b; }
-  .tab.special.active { background: #ff6b6b; color: #0f0f0f; border-color: #ff6b6b; }
   .day-panel { display: none; }
   .day-panel.active { display: block; }
   .meal-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
-  .meal-card.highlight { border-color: #333; }
   .meal-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
   .meal-time { font-size: 11px; color: #555; font-family: 'DM Mono', monospace; min-width: 46px; padding-top: 2px; }
   .meal-name { font-size: 14px; font-weight: 600; color: #e8e8e0; }
   .badge { display: inline-block; font-size: 10px; border-radius: 4px; padding: 1px 6px; font-weight: 500; margin-left: 6px; font-family: 'DM Mono', monospace; }
   .badge-pre { background: #2d1f00; color: #ffaa44; }
   .badge-post { background: #001f12; color: #44ffaa; }
-  .badge-rest { background: #1a1a2e; color: #8888ff; }
   .food { font-size: 13px; color: #aaa; line-height: 1.7; margin-bottom: 10px; }
   .food b { color: #e8e8e0; font-weight: 500; }
   .macros { display: flex; gap: 5px; flex-wrap: wrap; }
@@ -38,87 +34,84 @@
   .total-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px; padding: 10px; text-align: center; }
   .total-val { font-size: 18px; font-weight: 600; font-family: 'DM Mono', monospace; }
   .total-lbl { font-size: 10px; color: #555; margin-top: 2px; text-transform: uppercase; letter-spacing: .05em; }
-  .aniversario-card { background: #1a0d0d; border: 1px solid #ff6b6b33; border-radius: 10px; padding: 20px; text-align: center; }
-  .aniversario-card h2 { font-size: 22px; margin-bottom: 8px; }
-  .aniversario-card p { font-size: 13px; color: #aaa; line-height: 1.7; }
-  .aniversario-card .heart { font-size: 32px; margin-bottom: 10px; display: block; }
-  .note { font-size: 12px; color: #555; background: #1a1a1a; border-radius: 8px; padding: 12px 14px; margin-top: 4px; line-height: 1.7; border: 1px solid #2a2a2a; }
+  .note { font-size: 12px; color: #555; background: #1a1a1a; border-radius: 8px; padding: 12px 14px; margin-top: 12px; line-height: 1.7; border: 1px solid #2a2a2a; }
   .note b { color: #888; }
-  .soya-tip { background: #0d1a0d; border: 1px solid #44ff4422; border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; font-size: 12px; color: #66cc66; line-height: 1.7; }
-  .soya-tip b { color: #88ff88; }
+  .tip { background: #0d1a0d; border: 1px solid #44ff4422; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; font-size: 12px; color: #66cc66; line-height: 1.6; }
+  .tip b { color: #88ff88; }
 </style>
 </head>
 <body>
 
-<h1>Menú Semana 2 · Mayo 2026</h1>
-<p class="subtitle">Higher Carb · ~2,250 kcal · P:169g / C:281g / G:50g</p>
+<h1>Menú Semana 3 · 11–15 Mayo 2026</h1>
+<p class="subtitle">Higher Carb · ~2,250 kcal · P:169g / C:281g / G:50g · 5 días de entreno</p>
 
 <div class="tabs">
-  <div class="tab active" onclick="showDay('lun')">Lun</div>
-  <div class="tab special" onclick="showDay('mar')">Mar 💕</div>
-  <div class="tab" onclick="showDay('mie')">Mié</div>
-  <div class="tab" onclick="showDay('jue')">Jue</div>
-  <div class="tab" onclick="showDay('vie')">Vie</div>
+  <div class="tab active" onclick="showDay('lun')">Lun 11</div>
+  <div class="tab" onclick="showDay('mar')">Mar 12</div>
+  <div class="tab" onclick="showDay('mie')">Mié 13</div>
+  <div class="tab" onclick="showDay('jue')">Jue 14</div>
+  <div class="tab" onclick="showDay('vie')">Vie 15</div>
 </div>
 
 <!-- LUNES -->
 <div class="day-panel active" id="day-lun">
+  <div class="tip"><b>🍗 Lunes:</b> Usamos el pollo rostizado deshebrado que ya tienes listo. Regístralo en FatSecret como "pollo rostizado sin piel cocido".</div>
   <div class="totals">
-    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,240</div><div class="total-lbl">kcal</div></div>
-    <div class="total-card"><div class="total-val" style="color:#aa88ff">~168g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~280g</div><div class="total-lbl">carbos</div></div>
-    <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
+    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,230</div><div class="total-lbl">kcal</div></div>
+    <div class="total-card"><div class="total-val" style="color:#aa88ff">~167g</div><div class="total-lbl">proteína</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~278g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#ffaa44">~49g</div><div class="total-lbl">grasas</div></div>
   </div>
-
   <div class="meal-card">
     <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>35g whey</b> + <b>250ml leche deslactosada</b> + <b>50g avena seca</b> + <b>100g pepino</b> pelado (licuado)</div>
-    <div class="macros"><span class="tag tp">P~40g</span><span class="tag tc">C~65g</span><span class="tag tf">G~10g</span><span class="tag tk">~515 kcal</span></div>
+    <div class="food"><b>35g whey</b> + <b>250ml leche Alpura light</b> + <b>50g avena seca</b> + <b>150g papaya</b> (licuado)</div>
+    <div class="macros"><span class="tag tp">P~38g</span><span class="tag tc">C~64g</span><span class="tag tf">G~8g</span><span class="tag tk">~480 kcal</span></div>
   </div>
-
   <div class="meal-card">
     <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
-    <div class="food"><b>200g claras líquidas</b> + <b>1 huevo entero (50g)</b> revueltos + <b>2 rebanadas pan integral (60g)</b> + <b>30g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~34g</span><span class="tag tc">C~52g</span><span class="tag tf">G~14g</span><span class="tag tk">~470 kcal</span></div>
-  </div>
-
-  <div class="meal-card highlight">
-    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
-    <div class="food"><b>180g pechuga de pollo</b> (cruda) + <b>200g arroz cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~50g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~693 kcal</span></div>
-  </div>
-
-  <div class="meal-card highlight">
-    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
-    <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + chilitos encurtidos 🌶️</div>
-    <div class="macros"><span class="tag tp">P~44g</span><span class="tag tc">C~68g</span><span class="tag tf">G~13g</span><span class="tag tk">~562 kcal</span></div>
-  </div>
-</div>
-
-<!-- MARTES — ANIVERSARIO -->
-<div class="day-panel" id="day-mar">
-  <div class="aniversario-card">
-    <span class="heart">🎉</span>
-    <h2>¡Feliz aniversario!</h2>
-    <p>Hoy solo hay plan para el desayuno y almuerzo.<br>La cena es tuya y de tu novia — sin registrar, sin culpa, sin límites.<br><br>Come rico, disfruten, que un día así no rompe nada.</p>
-  </div>
-  <br>
-
-  <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno — normal</span></div></div>
-    <div class="food"><b>35g whey</b> + <b>250ml leche deslactosada</b> + <b>50g avena seca</b> + <b>100g piña</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~40g</span><span class="tag tc">C~67g</span><span class="tag tf">G~10g</span><span class="tag tk">~520 kcal</span></div>
-  </div>
-
-  <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo — normal</span></div></div>
     <div class="food"><b>200g claras líquidas</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>2 rebanadas pan integral (60g)</b> tostado + <b>30g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~36g</span><span class="tag tc">C~54g</span><span class="tag tf">G~13g</span><span class="tag tk">~473 kcal</span></div>
   </div>
+  <div class="meal-card">
+    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
+    <div class="food"><b>170g pollo rostizado deshebrado</b> + <b>200g arroz cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
+    <div class="macros"><span class="tag tp">P~50g</span><span class="tag tc">C~95g</span><span class="tag tf">G~14g</span><span class="tag tk">~698 kcal</span></div>
+  </div>
+  <div class="meal-card">
+    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
+    <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + chilitos 🌶️</div>
+    <div class="macros"><span class="tag tp">P~43g</span><span class="tag tc">C~65g</span><span class="tag tf">G~14g</span><span class="tag tk">~579 kcal</span></div>
+  </div>
+</div>
 
-  <div class="meal-card" style="border-color:#ff6b6b22">
-    <div class="meal-header"><span class="meal-time">noche</span><div><span class="meal-name">Cena / Salida 💕</span></div></div>
-    <div class="food" style="color:#ff6b6b88">Sin registro. Disfruta.</div>
+<!-- MARTES -->
+<div class="day-panel" id="day-mar">
+  <div class="tip"><b>🌱 Martes:</b> Soya en el almuerzo — ya está lista y sazonada, no hay pretexto 😄</div>
+  <div class="totals">
+    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,245</div><div class="total-lbl">kcal</div></div>
+    <div class="total-card"><div class="total-val" style="color:#aa88ff">~169g</div><div class="total-lbl">proteína</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~280g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
+  </div>
+  <div class="meal-card">
+    <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
+    <div class="food"><b>35g whey</b> + <b>250ml leche Alpura light</b> + <b>50g avena seca</b> + <b>150g papaya</b> (licuado)</div>
+    <div class="macros"><span class="tag tp">P~38g</span><span class="tag tc">C~64g</span><span class="tag tf">G~8g</span><span class="tag tk">~480 kcal</span></div>
+  </div>
+  <div class="meal-card">
+    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo — soya 🌱</span></div></div>
+    <div class="food"><b>150g soya texturizada hidratada</b> (ya preparada) + <b>150g arroz cocido</b> + <b>2 rebanadas pan integral (60g)</b></div>
+    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~62g</span><span class="tag tf">G~8g</span><span class="tag tk">~458 kcal</span></div>
+  </div>
+  <div class="meal-card">
+    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
+    <div class="food"><b>180g pechuga de pollo</b> (cruda, ya sazonada) + <b>200g arroz cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
+    <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
+  </div>
+  <div class="meal-card">
+    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
+    <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + chilitos 🌶️</div>
+    <div class="macros"><span class="tag tp">P~44g</span><span class="tag tc">C~59g</span><span class="tag tf">G~21g</span><span class="tag tk">~602 kcal</span></div>
   </div>
 </div>
 
@@ -126,71 +119,59 @@
 <div class="day-panel" id="day-mie">
   <div class="totals">
     <div class="total-card"><div class="total-val" style="color:#66cc66">~2,250</div><div class="total-lbl">kcal</div></div>
-    <div class="total-card"><div class="total-val" style="color:#aa88ff">~169g</div><div class="total-lbl">proteína</div></div>
+    <div class="total-card"><div class="total-val" style="color:#aa88ff">~170g</div><div class="total-lbl">proteína</div></div>
     <div class="total-card"><div class="total-val" style="color:#44aaff">~281g</div><div class="total-lbl">carbos</div></div>
     <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
   </div>
-
-  <div class="soya-tip">
-    <b>🌱 Día de estreno de la soya:</b> Hidrata 80g soya texturizada seca en agua caliente 15 min, escurre bien, exprime con las manos. Sofríe con cebolla, ajo en polvo y sabroceador. Sale como carne molida. Úsala en el almuerzo hoy.
-  </div>
-
   <div class="meal-card">
     <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>35g whey</b> + <b>250ml leche deslactosada</b> + <b>50g avena seca</b> + <b>100g piña</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~40g</span><span class="tag tc">C~67g</span><span class="tag tf">G~10g</span><span class="tag tk">~520 kcal</span></div>
+    <div class="food"><b>35g whey</b> + <b>250ml leche Alpura light</b> + <b>50g avena seca</b> + <b>150g papaya</b> (licuado)</div>
+    <div class="macros"><span class="tag tp">P~38g</span><span class="tag tc">C~64g</span><span class="tag tf">G~8g</span><span class="tag tk">~480 kcal</span></div>
   </div>
-
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo — estreno soya 🌱</span></div></div>
-    <div class="food"><b>80g soya seca</b> (hidratada y guisada con cebolla + sabroceador) + <b>150g arroz cocido</b> + <b>2 rebanadas pan integral (60g)</b></div>
-    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~62g</span><span class="tag tf">G~8g</span><span class="tag tk">~458 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
+    <div class="food"><b>200g claras líquidas</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>2 rebanadas pan integral (60g)</b> tostado + <b>25g queso Oaxaca</b></div>
+    <div class="macros"><span class="tag tp">P~36g</span><span class="tag tc">C~54g</span><span class="tag tf">G~12g</span><span class="tag tk">~468 kcal</span></div>
   </div>
-
-  <div class="meal-card highlight">
+  <div class="meal-card">
     <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
     <div class="food"><b>180g pechuga de pollo</b> (cruda) + <b>200g arroz cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~50g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~693 kcal</span></div>
+    <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
   </div>
-
-  <div class="meal-card highlight">
+  <div class="meal-card">
     <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
     <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + chilitos 🌶️</div>
-    <div class="macros"><span class="tag tp">P~44g</span><span class="tag tc">C~57g</span><span class="tag tf">G~19g</span><span class="tag tk">~579 kcal</span></div>
+    <div class="macros"><span class="tag tp">P~44g</span><span class="tag tc">C~68g</span><span class="tag tf">G~17g</span><span class="tag tk">~597 kcal</span></div>
   </div>
 </div>
 
 <!-- JUEVES -->
 <div class="day-panel" id="day-jue">
   <div class="totals">
-    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,235</div><div class="total-lbl">kcal</div></div>
-    <div class="total-card"><div class="total-val" style="color:#aa88ff">~170g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~275g</div><div class="total-lbl">carbos</div></div>
-    <div class="total-card"><div class="total-val" style="color:#ffaa44">~51g</div><div class="total-lbl">grasas</div></div>
+    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,240</div><div class="total-lbl">kcal</div></div>
+    <div class="total-card"><div class="total-val" style="color:#aa88ff">~168g</div><div class="total-lbl">proteína</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~279g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
   </div>
-
   <div class="meal-card">
     <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>35g whey</b> + <b>250ml leche deslactosada</b> + <b>50g avena seca</b> + <b>100g pepino</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~40g</span><span class="tag tc">C~65g</span><span class="tag tf">G~10g</span><span class="tag tk">~515 kcal</span></div>
+    <div class="food"><b>35g whey</b> + <b>250ml leche Alpura light</b> + <b>50g avena seca</b> + <b>150g papaya</b> (licuado)</div>
+    <div class="macros"><span class="tag tp">P~38g</span><span class="tag tc">C~64g</span><span class="tag tf">G~8g</span><span class="tag tk">~480 kcal</span></div>
   </div>
-
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
-    <div class="food"><b>200g claras líquidas</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>2 rebanadas pan integral (60g)</b> tostado + <b>25g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~36g</span><span class="tag tc">C~54g</span><span class="tag tf">G~12g</span><span class="tag tk">~468 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo — soya 🌱</span></div></div>
+    <div class="food"><b>150g soya texturizada hidratada</b> + <b>150g arroz cocido</b> + <b>2 rebanadas pan integral (60g)</b></div>
+    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~62g</span><span class="tag tf">G~8g</span><span class="tag tk">~458 kcal</span></div>
   </div>
-
-  <div class="meal-card highlight">
+  <div class="meal-card">
     <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
     <div class="food"><b>180g pechuga de pollo</b> (cruda) + <b>200g arroz cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~50g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~693 kcal</span></div>
+    <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
   </div>
-
-  <div class="meal-card highlight">
+  <div class="meal-card">
     <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
     <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + chilitos 🌶️</div>
-    <div class="macros"><span class="tag tp">P~44g</span><span class="tag tc">C~61g</span><span class="tag tf">G~16g</span><span class="tag tk">~559 kcal</span></div>
+    <div class="macros"><span class="tag tp">P~43g</span><span class="tag tc">C~68g</span><span class="tag tf">G~21g</span><span class="tag tk">~597 kcal</span></div>
   </div>
 </div>
 
@@ -199,37 +180,33 @@
   <div class="totals">
     <div class="total-card"><div class="total-val" style="color:#66cc66">~2,245</div><div class="total-lbl">kcal</div></div>
     <div class="total-card"><div class="total-val" style="color:#aa88ff">~169g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~278g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~280g</div><div class="total-lbl">carbos</div></div>
     <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
   </div>
-
   <div class="meal-card">
     <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>35g whey</b> + <b>250ml leche deslactosada</b> + <b>50g avena seca</b> + <b>100g piña</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~40g</span><span class="tag tc">C~67g</span><span class="tag tf">G~10g</span><span class="tag tk">~520 kcal</span></div>
+    <div class="food"><b>35g whey</b> + <b>250ml leche Alpura light</b> + <b>50g avena seca</b> + <b>150g papaya</b> (licuado)</div>
+    <div class="macros"><span class="tag tp">P~38g</span><span class="tag tc">C~64g</span><span class="tag tf">G~8g</span><span class="tag tk">~480 kcal</span></div>
   </div>
-
   <div class="meal-card">
     <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
-    <div class="food"><b>200g claras líquidas</b> + <b>2 rebanadas pan integral (60g)</b> + <b>30g queso Oaxaca</b> + <b>3 rebanadas jamón de pavo (60g)</b></div>
-    <div class="macros"><span class="tag tp">P~36g</span><span class="tag tc">C~52g</span><span class="tag tf">G~13g</span><span class="tag tk">~465 kcal</span></div>
+    <div class="food"><b>200g claras líquidas</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>2 rebanadas pan integral (60g)</b> tostado + <b>30g queso Oaxaca</b></div>
+    <div class="macros"><span class="tag tp">P~36g</span><span class="tag tc">C~54g</span><span class="tag tf">G~13g</span><span class="tag tk">~473 kcal</span></div>
   </div>
-
-  <div class="meal-card highlight">
+  <div class="meal-card">
     <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
     <div class="food"><b>180g pechuga de pollo</b> (cruda) + <b>200g arroz cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~50g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~693 kcal</span></div>
+    <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
   </div>
-
-  <div class="meal-card highlight">
+  <div class="meal-card">
     <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
     <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + chilitos 🌶️</div>
-    <div class="macros"><span class="tag tp">P~43g</span><span class="tag tc">C~64g</span><span class="tag tf">G~14g</span><span class="tag tk">~567 kcal</span></div>
+    <div class="macros"><span class="tag tp">P~43g</span><span class="tag tc">C~67g</span><span class="tag tf">G~16g</span><span class="tag tk">~587 kcal</span></div>
   </div>
 </div>
 
-<div class="note" style="margin-top:16px">
-  <b>Recordatorios semana 2:</b> Pechuga siempre pesada en crudo · Arroz pesado cocido · Claras líquidas San Juan: 200g = ~6-7 claras · Queso Oaxaca máx 30-35g por comida · Atún en aceite si lo usas = quita el queso de esa comida · Soya: registrar como "soya texturizada hidratada" en tu app
+<div class="note">
+  <b>Recordatorios semana 3:</b> Pechuga pesada en crudo desde el martes · Pollo rostizado regístralo como "pollo rostizado sin piel cocido" solo el lunes · Arroz pesado cocido siempre · Soya: registrar como "soya texturizada hidratada" · Leche Alpura light: 86 kcal por 250ml ya contemplado · El viernes coordinamos el fin de semana con tu novia 🎯
 </div>
 
 <script>
