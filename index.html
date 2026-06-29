@@ -1,9 +1,9 @@
-Put your HTML text here<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menú — De Vuelta 💪</title>
+<title>Menú — Semana de Regreso 💪</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,11 +17,11 @@ Put your HTML text here<!DOCTYPE html>
   .day-panel.active { display: block; }
   .meal-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
   .meal-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
-  .meal-time { font-size: 11px; color: #555; font-family: 'DM Mono', monospace; min-width: 46px; padding-top: 2px; }
+  .meal-time { font-size: 11px; color: #555; font-family: 'DM Mono', monospace; min-width: 52px; padding-top: 2px; }
   .meal-name { font-size: 14px; font-weight: 600; color: #e8e8e0; }
   .badge { display: inline-block; font-size: 10px; border-radius: 4px; padding: 1px 6px; font-weight: 500; margin-left: 6px; font-family: 'DM Mono', monospace; }
-  .badge-pre { background: #2d1f00; color: #ffaa44; }
   .badge-post { background: #001f12; color: #44ffaa; }
+  .badge-light { background: #1a1a2e; color: #8888ff; }
   .food { font-size: 13px; color: #aaa; line-height: 1.7; margin-bottom: 10px; }
   .food b { color: #e8e8e0; font-weight: 500; }
   .macros { display: flex; gap: 5px; flex-wrap: wrap; }
@@ -38,179 +38,159 @@ Put your HTML text here<!DOCTYPE html>
   .note b { color: #888; }
   .tip { background: #0d1a0d; border: 1px solid #44ff4422; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; font-size: 12px; color: #66cc66; line-height: 1.6; }
   .tip b { color: #88ff88; }
-  .tip-yellow { background: #1a1500; border: 1px solid #ffaa4422; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; font-size: 12px; color: #ffaa44; line-height: 1.6; }
-  .tip-yellow b { color: #ffcc88; }
+  .timeline { display: flex; gap: 0; margin-bottom: 16px; border-radius: 8px; overflow: hidden; }
+  .tl { flex: 1; padding: 8px 4px; text-align: center; font-size: 10px; font-weight: 500; font-family: 'DM Mono', monospace; }
+  .tl-1 { background: #1a1030; color: #aa88ff; }
+  .tl-2 { background: #0d1f30; color: #44aaff; }
+  .tl-gym { background: #2d1f00; color: #ffaa44; }
+  .tl-3 { background: #001f12; color: #44ffaa; }
+  .tl-4 { background: #1a1520; color: #8888ff; }
 </style>
 </head>
 <body>
-
-<h1>Menú — De vuelta 💪</h1>
-<p class="subtitle">Higher Carb · ~2,250 kcal · P:169g / C:281g / G:50g · Entreno 5pm</p>
-
+ 
+<h1>Menú Semana de Regreso ✨</h1>
+<p class="subtitle">Higher Carb · ~2,250 kcal · P:169g / C:281g / G:50g · Gym 4–5pm</p>
+ 
 <div class="tabs">
-  <div class="tab active" onclick="showDay('lun')">Lun</div>
-  <div class="tab" onclick="showDay('mar')">Mar</div>
+  <div class="tab active" onclick="showDay('mar')">Mar</div>
   <div class="tab" onclick="showDay('mie')">Mié</div>
   <div class="tab" onclick="showDay('jue')">Jue</div>
   <div class="tab" onclick="showDay('vie')">Vie</div>
 </div>
-
-<!-- LUNES -->
-<div class="day-panel active" id="day-lun">
-  <div class="tip-yellow"><b>⚠️ Lunes sin pollo:</b> Usamos atún en la comida principal. Mañana ya compras pollo y volvemos al plan normal.</div>
-  <div class="totals">
-    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,180</div><div class="total-lbl">kcal</div></div>
-    <div class="total-card"><div class="total-val" style="color:#aa88ff">~162g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~268g</div><div class="total-lbl">carbos</div></div>
-    <div class="total-card"><div class="total-val" style="color:#ffaa44">~48g</div><div class="total-lbl">grasas</div></div>
-  </div>
-  <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>30g proteína Dr. Simi</b> (1 scoop) + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> (licuado sin fruta)</div>
-    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~55g</span><span class="tag tf">G~8g</span><span class="tag tk">~430 kcal</span></div>
-  </div>
-  <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
-    <div class="food"><b>3 huevos enteros</b> revueltos + <b>2 rebanadas pan integral (60g)</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~32g</span><span class="tag tc">C~32g</span><span class="tag tf">G~20g</span><span class="tag tk">~440 kcal</span></div>
-  </div>
-  <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
-    <div class="food"><b>190g atún en agua escurrido</b> + <b>200g arroz blanco cocido</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~90g</span><span class="tag tf">G~10g</span><span class="tag tk">~660 kcal</span></div>
-  </div>
-  <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
-    <div class="food"><b>3 huevos enteros</b> revueltos + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + salsa</div>
-    <div class="macros"><span class="tag tp">P~28g</span><span class="tag tc">C~71g</span><span class="tag tf">G~18g</span><span class="tag tk">~550 kcal</span></div>
-  </div>
+ 
+<div class="timeline">
+  <div class="tl tl-1">9am<br>Licuado</div>
+  <div class="tl tl-2">12–1pm<br>Almuerzo</div>
+  <div class="tl tl-gym">4–5pm<br>GYM 🔥</div>
+  <div class="tl tl-3">6–7pm<br>Comida</div>
+  <div class="tl tl-4">10:30–11pm<br>Cena</div>
 </div>
-
+ 
 <!-- MARTES -->
-<div class="day-panel" id="day-mar">
-  <div class="tip"><b>🐔 Del martes en adelante:</b> Ya tienes pollo. Volvemos al plan completo normal.</div>
+<div class="day-panel active" id="day-mar">
   <div class="totals">
-    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,245</div><div class="total-lbl">kcal</div></div>
+    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,240</div><div class="total-lbl">kcal</div></div>
     <div class="total-card"><div class="total-val" style="color:#aa88ff">~166g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~278g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~277g</div><div class="total-lbl">carbos</div></div>
     <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~55g</span><span class="tag tf">G~8g</span><span class="tag tk">~430 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">9:00 am</span><div><span class="meal-name">Licuado 🍌</span></div></div>
+    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> + <b>120g plátano</b></div>
+    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~65g</span><span class="tag tf">G~8g</span><span class="tag tk">~470 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
-    <div class="food"><b>3 huevos enteros</b> revueltos + <b>2 rebanadas pan integral (60g)</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
+    <div class="meal-header"><span class="meal-time">12–1 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
+    <div class="food"><b>~170g huevo entero</b> (~3 huevos) revueltos + <b>2 rebanadas pan integral (60g)</b> tostado + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~32g</span><span class="tag tc">C~32g</span><span class="tag tf">G~20g</span><span class="tag tk">~440 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
+    <div class="meal-header"><span class="meal-time">6–7 pm</span><div><span class="meal-name">Comida <span class="badge badge-post">post-entreno</span></span></div></div>
     <div class="food"><b>180g pechuga cruda</b> + <b>200g arroz blanco cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
-    <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + salsa</div>
-    <div class="macros"><span class="tag tp">P~47g</span><span class="tag tc">C~96g</span><span class="tag tf">G~9g</span><span class="tag tk">~670 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">10:30–11 pm</span><div><span class="meal-name">Cena <span class="badge badge-light">ligera</span></span></div></div>
+    <div class="food"><b>190g atún en agua escurrido</b> + <b>2 tortillas maíz (60g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + salsa</div>
+    <div class="macros"><span class="tag tp">P~47g</span><span class="tag tc">C~58g</span><span class="tag tf">G~9g</span><span class="tag tk">~505 kcal</span></div>
   </div>
 </div>
-
+ 
 <!-- MIÉRCOLES -->
 <div class="day-panel" id="day-mie">
   <div class="totals">
-    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,245</div><div class="total-lbl">kcal</div></div>
+    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,240</div><div class="total-lbl">kcal</div></div>
     <div class="total-card"><div class="total-val" style="color:#aa88ff">~166g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~278g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~277g</div><div class="total-lbl">carbos</div></div>
     <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~55g</span><span class="tag tf">G~8g</span><span class="tag tk">~430 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">9:00 am</span><div><span class="meal-name">Licuado 🍍</span></div></div>
+    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> + <b>120g piña</b></div>
+    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~63g</span><span class="tag tf">G~8g</span><span class="tag tk">~460 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo — variación jamón</span></div></div>
-    <div class="food"><b>3 huevos enteros</b> revueltos + <b>3 rebanadas jamón de pavo (60g)</b> + <b>2 rebanadas pan integral (60g)</b> tostado + <b>25g queso Oaxaca</b></div>
+    <div class="meal-header"><span class="meal-time">12–1 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
+    <div class="food"><b>~170g huevo entero</b> (~3 huevos) revueltos + <b>2 rebanadas pan integral (60g)</b> tostado + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~32g</span><span class="tag tc">C~32g</span><span class="tag tf">G~20g</span><span class="tag tk">~440 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
+    <div class="meal-header"><span class="meal-time">6–7 pm</span><div><span class="meal-name">Comida <span class="badge badge-post">post-entreno</span></span></div></div>
     <div class="food"><b>180g pechuga cruda</b> + <b>200g arroz blanco cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
-    <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + salsa</div>
-    <div class="macros"><span class="tag tp">P~47g</span><span class="tag tc">C~96g</span><span class="tag tf">G~9g</span><span class="tag tk">~670 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">10:30–11 pm</span><div><span class="meal-name">Cena <span class="badge badge-light">ligera</span></span></div></div>
+    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche</b> + <b>2 tortillas maíz (60g)</b> + <b>100g frijoles refritos</b> — sin atún hoy 🙌</div>
+    <div class="macros"><span class="tag tp">P~43g</span><span class="tag tc">C~62g</span><span class="tag tf">G~8g</span><span class="tag tk">~490 kcal</span></div>
   </div>
 </div>
-
+ 
 <!-- JUEVES -->
 <div class="day-panel" id="day-jue">
   <div class="totals">
-    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,245</div><div class="total-lbl">kcal</div></div>
+    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,240</div><div class="total-lbl">kcal</div></div>
     <div class="total-card"><div class="total-val" style="color:#aa88ff">~166g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~278g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~277g</div><div class="total-lbl">carbos</div></div>
     <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~55g</span><span class="tag tf">G~8g</span><span class="tag tk">~430 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">9:00 am</span><div><span class="meal-name">Licuado 🍌</span></div></div>
+    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> + <b>120g plátano</b></div>
+    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~65g</span><span class="tag tf">G~8g</span><span class="tag tk">~470 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
-    <div class="food"><b>3 huevos enteros</b> revueltos + <b>2 rebanadas pan integral (60g)</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
+    <div class="meal-header"><span class="meal-time">12–1 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
+    <div class="food"><b>~170g huevo entero</b> (~3 huevos) revueltos + <b>2 rebanadas pan integral (60g)</b> tostado + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~32g</span><span class="tag tc">C~32g</span><span class="tag tf">G~20g</span><span class="tag tk">~440 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
+    <div class="meal-header"><span class="meal-time">6–7 pm</span><div><span class="meal-name">Comida <span class="badge badge-post">post-entreno</span></span></div></div>
     <div class="food"><b>180g pechuga cruda</b> + <b>200g arroz blanco cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena — sin atún 🙌 <span class="badge badge-post">post-entreno</span></span></div></div>
-    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b></div>
-    <div class="macros"><span class="tag tp">P~47g</span><span class="tag tc">C~96g</span><span class="tag tf">G~9g</span><span class="tag tk">~670 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">10:30–11 pm</span><div><span class="meal-name">Cena <span class="badge badge-light">ligera</span></span></div></div>
+    <div class="food"><b>190g atún en agua escurrido</b> + <b>2 tortillas maíz (60g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + salsa</div>
+    <div class="macros"><span class="tag tp">P~47g</span><span class="tag tc">C~58g</span><span class="tag tf">G~9g</span><span class="tag tk">~505 kcal</span></div>
   </div>
 </div>
-
+ 
 <!-- VIERNES -->
 <div class="day-panel" id="day-vie">
   <div class="totals">
-    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,245</div><div class="total-lbl">kcal</div></div>
+    <div class="total-card"><div class="total-val" style="color:#66cc66">~2,240</div><div class="total-lbl">kcal</div></div>
     <div class="total-card"><div class="total-val" style="color:#aa88ff">~166g</div><div class="total-lbl">proteína</div></div>
-    <div class="total-card"><div class="total-val" style="color:#44aaff">~278g</div><div class="total-lbl">carbos</div></div>
+    <div class="total-card"><div class="total-val" style="color:#44aaff">~277g</div><div class="total-lbl">carbos</div></div>
     <div class="total-card"><div class="total-val" style="color:#ffaa44">~50g</div><div class="total-lbl">grasas</div></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 am</span><div><span class="meal-name">Desayuno</span></div></div>
-    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> (licuado)</div>
-    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~55g</span><span class="tag tf">G~8g</span><span class="tag tk">~430 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">9:00 am</span><div><span class="meal-name">Licuado 🍍</span></div></div>
+    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche Santa Clara deslactosada</b> + <b>50g avena seca</b> + <b>120g piña</b></div>
+    <div class="macros"><span class="tag tp">P~35g</span><span class="tag tc">C~63g</span><span class="tag tf">G~8g</span><span class="tag tk">~460 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">12:00 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
-    <div class="food"><b>3 huevos enteros</b> revueltos + <b>2 rebanadas pan integral (60g)</b> + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
+    <div class="meal-header"><span class="meal-time">12–1 pm</span><div><span class="meal-name">Almuerzo</span></div></div>
+    <div class="food"><b>~170g huevo entero</b> (~3 huevos) revueltos + <b>2 rebanadas pan integral (60g)</b> tostado + <b>3 rebanadas jamón de pavo (60g)</b> + <b>25g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~32g</span><span class="tag tc">C~32g</span><span class="tag tf">G~20g</span><span class="tag tk">~440 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">3:30 pm</span><div><span class="meal-name">Comida <span class="badge badge-pre">pre-entreno</span></span></div></div>
+    <div class="meal-header"><span class="meal-time">6–7 pm</span><div><span class="meal-name">Comida <span class="badge badge-post">post-entreno</span></span></div></div>
     <div class="food"><b>180g pechuga cruda</b> + <b>200g arroz blanco cocido</b> + <b>100g frijoles refritos</b> + <b>30g queso Oaxaca</b></div>
     <div class="macros"><span class="tag tp">P~52g</span><span class="tag tc">C~95g</span><span class="tag tf">G~13g</span><span class="tag tk">~705 kcal</span></div>
   </div>
   <div class="meal-card">
-    <div class="meal-header"><span class="meal-time">8:00 pm</span><div><span class="meal-name">Cena <span class="badge badge-post">post-entreno</span></span></div></div>
-    <div class="food"><b>190g atún en agua escurrido</b> + <b>3 tortillas maíz (90g)</b> + <b>100g frijoles refritos</b> + <b>25g queso Oaxaca</b> + limón + salsa</div>
-    <div class="macros"><span class="tag tp">P~47g</span><span class="tag tc">C~96g</span><span class="tag tf">G~9g</span><span class="tag tk">~670 kcal</span></div>
+    <div class="meal-header"><span class="meal-time">10:30–11 pm</span><div><span class="meal-name">Cena <span class="badge badge-light">ligera</span></span></div></div>
+    <div class="food"><b>30g proteína Dr. Simi</b> + <b>250ml leche</b> + <b>2 tortillas maíz (60g)</b> + <b>100g frijoles refritos</b> — sin atún 🙌</div>
+    <div class="macros"><span class="tag tp">P~43g</span><span class="tag tc">C~62g</span><span class="tag tf">G~8g</span><span class="tag tk">~490 kcal</span></div>
   </div>
 </div>
-
+ 
 <div class="note">
-  <b>Recordatorios:</b> Proteína Dr. Simi = 30g scoop, 26g proteína, 118 kcal · Pechuga siempre en crudo · Arroz pesado cocido · Leche Santa Clara deslactosada → registrar como "leche deslactosada" en FatSecret · Jueves cena sin atún — proteína + leche + tortillas + frijoles · 💧 Mínimo 2.5L agua diario · Bienvenido de vuelta 💪
+  <b>Recordatorios:</b> Proteína Dr. Simi = 30g scoop · Pechuga siempre en crudo · Arroz pesado cocido · Huevo ~170g = 3 huevos enteros · Cena ligera siempre — ya entrenaste, no necesitas mucho · Martes y jueves 🍌 plátano · Miércoles y viernes 🍍 piña · 💧 3 litros de agua — ya lo tienes como hábito, qué bien 💪
 </div>
-
+ 
 <script>
 function showDay(id) {
   document.querySelectorAll('.day-panel').forEach(p => p.classList.remove('active'));
@@ -221,3 +201,4 @@ function showDay(id) {
 </script>
 </body>
 </html>
+ 
